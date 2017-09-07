@@ -14,6 +14,7 @@ Requirements:
 Python Mysql and boto 
 
  ```
- apt-get install python-mysqldb
+ sudo apt-get install python-mysqldb
+ sudo apt-get install python-pip
  pip install boto
 ```
