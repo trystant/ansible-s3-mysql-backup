@@ -1,37 +1,45 @@
 Backup to S3 using Ansible
 =========================
 
-Creates a SQL Backup of a mysql database and store it in S3.
+Ansible task that makes a backup of a MySQL database and uploads it to
+an AWS S3 bucket.  
 
 ## Getting Started
 
+Clone the repository from the [repository](git@github.com:trystant/ansible-s3-mysql-backup.git)
+Update the `vars.yml` file with the following credentials:
+* deploy_user - SSH account
+* db_name - Database username
+* mysql_user - MyQL username
+* mysql_password - MySQL password
+* AWS Access Key - AWS Credentials
+* AWS Secret Key - AWS Credentials
 
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
-
-```                                                                                                                                                                         
-Give examples
-```
+* AWS Account
+* Single Host with SSH account in one host configuration
+* Public key SSH connection between source & destination SSH accounts in
+  two hose configuration
+* Python 2.6+ installed, with the following modules:
+  * pip
+  * python-mysqldb
+  * boto
+  * boto3
+  * botocore
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+Clone the repo from [GitHub](https://github.com/trystant/ansible-s3-mysql-backup).
 
 ```
-Give the example
+$ git clone git@github.com:trystant/ansible-s3-mysql-backup.git
 ```
 
-And repeat
+Install Python 2.6+
 
-```
-until finished
-
-
-```
 
 ## Running the Backup Task
 ```
